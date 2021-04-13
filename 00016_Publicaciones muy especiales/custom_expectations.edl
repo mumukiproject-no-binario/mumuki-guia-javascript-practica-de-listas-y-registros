@@ -1,0 +1,20 @@
+expectation "tenés que declarar `publicacionesCortasDelHilo`": 
+  declares something like `publicacionesCortasDelHilo`;
+
+expectation "tenés que recorrer la lista de publicaciones usando un `for`": 
+  somewhere (uses loop || uses `map` || uses `filter`);
+
+expectation "tenés que agregar publicaciones a una lista de publicaciones resultantes. La función `agregar` te puede ser de ayuda": 
+  somewhere (uses `map` || uses `filter` || uses `push` || uses `agregar`);
+
+expectation "para decidir si agregar la publicación a la lista resultante o no, te conviene usar `if`": 
+  somewhere (uses `map` || uses `filter` || uses if);
+
+expectation "vas a tener que obtener solamente las publicaciones que sean cortas, es decir, aquellas que tengan una longitud menor a 20 letras. Te conviene usar la función `longitud`": 
+  somewhere (uses size || uses like `longitud`);
+
+expectation "no es necesario usar tantos `for`. Fijate si podés resolverlo con sólo uno": 
+  count(uses for) <= 1;
+
+expectation "no es necesario usar tantos `if`. Fijate si podés resolverlo con sólo uno o dos": 
+  count(uses if) <= 2;
